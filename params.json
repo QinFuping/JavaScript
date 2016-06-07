@@ -1,0 +1,6 @@
+{
+  "name": "Javascript",
+  "tagline": "这只是一个测试",
+  "body": "### 以下操作会引起回流：\r\n\r\n① 改变窗口大小\r\n\r\n② font-size大小改变\r\n\r\n③ 增加或者移除样式表\r\n\r\n④ 内容变化（input中输入文字会导致）\r\n\r\n⑤ 激活CSS伪类（:hover）\r\n\r\n⑥ 操作class属性，新增或者减少\r\n\r\n⑦ js操作dom\r\n\r\n⑧ offset相关属性计算\r\n\r\n⑨ 设置style的值\r\n\r\n......\r\n\r\nreflow与repaint是减缓js的几大主要原因，尤其是reflow更是性能杀手，所以我们应该想法避免。\r\n\r\n减少页面回流：\r\n\r\n① 一起变化\r\n\r\n如果要改变一个元素的样式，可以将所有样式集中在一个class上面一次变化，而不是变化几次；\r\n\r\n② 具有动画效果请使用absolute\r\n\r\n因为absolute元素的改变对其它元素的回流影响不大，所以我们的动画效果的元素还是将他搞成absolute吧。\r\n\r\n③ 避免使用表格布局（记住只是布局哦，我们数据还是应该用表格的）\r\n\r\n④ 请绝对不要使用CSS表达式，性能杀手啊，特别是IE\r\n\r\n⑤ 在最末改变元素\r\n\r\n因为回流是自上而下的，所以下不及上，我们在最后面修改信息对全局影响越少。\r\n\r\n⑥ 动画移动时候，要控制\r\n\r\n比如我们拖动元素时候，我是在他x或者y坐标改变5px才操作，这样虽说降低了平滑度，但是对性能有提高。",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

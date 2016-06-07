@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Javascript by QinFuping</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Javascript</h1>
+        <p>这只是一个测试</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/QinFuping/JavaScript" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/QinFuping/JavaScript/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/QinFuping/JavaScript/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h3>
+<a id="以下操作会引起回流" class="anchor" href="#%E4%BB%A5%E4%B8%8B%E6%93%8D%E4%BD%9C%E4%BC%9A%E5%BC%95%E8%B5%B7%E5%9B%9E%E6%B5%81" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>以下操作会引起回流：</h3>
+
+<p>① 改变窗口大小</p>
+
+<p>② font-size大小改变</p>
+
+<p>③ 增加或者移除样式表</p>
+
+<p>④ 内容变化（input中输入文字会导致）</p>
+
+<p>⑤ 激活CSS伪类（:hover）</p>
+
+<p>⑥ 操作class属性，新增或者减少</p>
+
+<p>⑦ js操作dom</p>
+
+<p>⑧ offset相关属性计算</p>
+
+<p>⑨ 设置style的值</p>
+
+<p>......</p>
+
+<p>reflow与repaint是减缓js的几大主要原因，尤其是reflow更是性能杀手，所以我们应该想法避免。</p>
+
+<p>减少页面回流：</p>
+
+<p>① 一起变化</p>
+
+<p>如果要改变一个元素的样式，可以将所有样式集中在一个class上面一次变化，而不是变化几次；</p>
+
+<p>② 具有动画效果请使用absolute</p>
+
+<p>因为absolute元素的改变对其它元素的回流影响不大，所以我们的动画效果的元素还是将他搞成absolute吧。</p>
+
+<p>③ 避免使用表格布局（记住只是布局哦，我们数据还是应该用表格的）</p>
+
+<p>④ 请绝对不要使用CSS表达式，性能杀手啊，特别是IE</p>
+
+<p>⑤ 在最末改变元素</p>
+
+<p>因为回流是自上而下的，所以下不及上，我们在最后面修改信息对全局影响越少。</p>
+
+<p>⑥ 动画移动时候，要控制</p>
+
+<p>比如我们拖动元素时候，我是在他x或者y坐标改变5px才操作，这样虽说降低了平滑度，但是对性能有提高。</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/QinFuping">QinFuping</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
